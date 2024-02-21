@@ -52,13 +52,16 @@ function playRound(playerSelection, computerSelection) {
         return `${playerSelection} is not an option`
     }
   }
+
   
-  console.log(playRound(playerSelection, computerSelection));
-  console.log(playerScore, computerScore);
 
 function playGame(){
-  for (let i = 0; i<4; i++) { 
+  for (let i = 0; i<=4; i++) { 
     playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
+    computerSelection = getComputerChoice();
+
+    console.log(playerSelection, computerSelection, playRound(playerSelection, computerSelection));
+    console.log(playerScore, computerScore)
     }
 }
 
