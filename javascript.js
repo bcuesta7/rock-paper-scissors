@@ -27,17 +27,21 @@ console.log(computerSelection);
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection){
         return `Tie! You both choose ${playerSelection}`;
-    }else if(playerSelection == "rock" && computerSelection == "paper"){
-        return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else if(playerSelection == "rock" && computerSelection == "scissors"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
+    }else if(playerSelection == "rock" && computerSelection == "paper"){
+        return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else if(playerSelection == "paper" && computerSelection == "rock"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
     }else if(playerSelection == "paper" && computerSelection == "scissors"){
         return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else if(playerSelection == "scissors" && computerSelection == "paper"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
-    }    
+    }else if(playerSelection == "scissors" && computerSelection == "rock"){
+        return `You Loose! ${computerSelection} beats ${playerSelection}`
+    }else{
+        return `${playerSelection} is not an option`
+    }
   }
   
   console.log(playRound(playerSelection, computerSelection));
