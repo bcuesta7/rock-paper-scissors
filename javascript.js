@@ -19,13 +19,9 @@ let computerSelection = getComputerChoice();
 let playerScore = 0;
 let computerScore = 0;
 
-
 function getComputerChoice(){
     return choice[Math.floor(Math.random() * choice.length)];
 }
-
-console.log(playerSelection);
-console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection){
@@ -42,11 +38,12 @@ function playRound(playerSelection, computerSelection) {
   }
 
 function playGame(){
-  for (let i = 0; i<=4; i++) { 
+  for (let i = 0; i<5; i++) { 
     playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
     computerSelection = getComputerChoice();
 
-    console.log(playerSelection, computerSelection, playRound(playerSelection, computerSelection));
+    console.log(`${playerSelection} VS ${computerSelection}`)
+    console.log(playRound(playerSelection, computerSelection));
     console.log(playerScore, computerScore)
     }
 }
