@@ -31,6 +31,8 @@ function playRound(playerSelection, computerSelection) {
         return `You Win! ${playerSelection} beats ${computerSelection}`
     }else if(playerSelection == "paper" && computerSelection == "rock"){
         return `You Loose! ${computerSelection} beats ${playerSelection}`
+    }else if(playerSelection == "scissors" && computerSelection == "paper"){
+        return `You Win! ${playerSelection} beats ${computerSelection}`
     }
   }
   
