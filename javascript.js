@@ -29,6 +29,8 @@ function playRound(playerSelection, computerSelection) {
         return `Tie! You both choose ${playerSelection}`;
     }else if(playerSelection == "rock" && computerSelection == "scissors"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
+    }else if(playerSelection == "paper" && computerSelection == "rock"){
+        return `You Loose! ${computerSelection} beats ${playerSelection}`
     }
   }
   
