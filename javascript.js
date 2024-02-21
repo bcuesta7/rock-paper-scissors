@@ -30,30 +30,16 @@ console.log(computerSelection);
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection){
         return `Tie! You both choose ${playerSelection}`;
-    }else if(playerSelection == "rock" && computerSelection == "scissors"){
+    }else if(playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock" || playerSelection == "scissors" && computerSelection == "paper"){
         playerScore++;
         return `You Win! ${playerSelection} beats ${computerSelection}`
-    }else if(playerSelection == "rock" && computerSelection == "paper"){
-        computerScore++;
-        return `You Loose! ${computerSelection} beats ${playerSelection}`
-    }else if(playerSelection == "paper" && computerSelection == "rock"){
-        playerScore++;
-        return `You Win! ${playerSelection} beats ${computerSelection}`
-    }else if(playerSelection == "paper" && computerSelection == "scissors"){
-        computerScore++;
-        return `You Loose! ${computerSelection} beats ${playerSelection}`
-    }else if(playerSelection == "scissors" && computerSelection == "paper"){
-        playerScore++;
-        return `You Win! ${playerSelection} beats ${computerSelection}`
-    }else if(playerSelection == "scissors" && computerSelection == "rock"){
+    }else if(playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock"){
         computerScore++;
         return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else{
         return `${playerSelection} is not an option`
     }
   }
-
-  
 
 function playGame(){
   for (let i = 0; i<=4; i++) { 
