@@ -14,17 +14,11 @@ Scissors beats Paper
 */
 
 let choice = ["rock", "paper", "scissors"];
-const playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
-const computerSelection = getComputerChoice();
+let playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
+let computerSelection = getComputerChoice();
 let playerScore = 0;
 let computerScore = 0;
 
-function playGame(){
-    for(let i = 0; i<=5; i++){
-        playerSelection;
-        computerSelection;
-    }
-  }
 
 function getComputerChoice(){
     return choice[Math.floor(Math.random() * choice.length)];
@@ -62,4 +56,10 @@ function playRound(playerSelection, computerSelection) {
   console.log(playRound(playerSelection, computerSelection));
   console.log(playerScore, computerScore);
 
-  
+function playGame(){
+  for (let i = 0; i<4; i++) { 
+    playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
+    }
+}
+
+console.log(playGame());
