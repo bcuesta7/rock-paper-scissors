@@ -26,7 +26,7 @@ console.log(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
     if(computerSelection == playerSelection){
-        return "Tie!";
+        return `Tie! You both choose ${playerSelection}`;
     }
   }
   
