@@ -13,14 +13,21 @@ Scissors beats Paper
 
 */
 
-let choices = ["rock", "paper", "scissors"];
-const playerSelection = "rock";
+let choice = ["rock", "paper", "scissors"];
+const playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?");
 const computerSelection = getComputerChoice();
 
+function getComputerChoice(){
+    return choice[Math.floor(Math.random() * choice.length)];
+}
 
+console.log(computerSelection);
+console.log(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
-    // your code here!
+    if(computerSelection == playerSelection){
+        return "Tie!";
+    }
   }
   
   console.log(playRound(playerSelection, computerSelection));
