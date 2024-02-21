@@ -14,7 +14,7 @@ Scissors beats Paper
 */
 
 let choice = ["rock", "paper", "scissors"];
-const playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?");
+const playerSelection = prompt("Which option do you choose: Rock, Paper or Scissors?").toLowerCase();
 const computerSelection = getComputerChoice();
 
 function getComputerChoice(){
@@ -25,8 +25,10 @@ console.log(computerSelection);
 console.log(playerSelection);
 
 function playRound(playerSelection, computerSelection) {
-    if(computerSelection == playerSelection){
+    if(playerSelection == computerSelection){
         return `Tie! You both choose ${playerSelection}`;
+    }else if{
+
     }
   }
   
