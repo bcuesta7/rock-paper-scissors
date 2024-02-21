@@ -12,3 +12,15 @@ Paper beats Rock
 Scissors beats Paper
 
 */
+
+let choices = ["rock", "paper", "scissors"];
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+
+
+
+function playRound(playerSelection, computerSelection) {
+    // your code here!
+  }
+  
+  console.log(playRound(playerSelection, computerSelection));
