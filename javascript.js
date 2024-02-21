@@ -28,12 +28,12 @@ function playRound(playerSelection, computerSelection) {
         return `Tie! You both choose ${playerSelection}`;
     }else if(playerSelection == "rock" && computerSelection == "scissors" || playerSelection == "paper" && computerSelection == "rock" || playerSelection == "scissors" && computerSelection == "paper"){
         playerScore++;
-        return `You Win! ${playerSelection} beats ${computerSelection}`
+        return `You Win! ${playerSelection} beats ${computerSelection}`;
     }else if(playerSelection == "rock" && computerSelection == "paper" || playerSelection == "paper" && computerSelection == "scissors" || playerSelection == "scissors" && computerSelection == "rock"){
         computerScore++;
-        return `You Loose! ${computerSelection} beats ${playerSelection}`
+        return `You Loose! ${computerSelection} beats ${playerSelection}`;
     }else{
-        return `${playerSelection} is not an option`
+        return `${playerSelection} is not an option`;
     }
   }
 
@@ -45,6 +45,14 @@ function playGame(){
     console.log(`${playerSelection} VS ${computerSelection}`)
     console.log(playRound(playerSelection, computerSelection));
     console.log(playerScore, computerScore)
+    }
+
+  if(playerScore > computerScore){
+       return "You are the winner! :)";
+    }else if(playerScore == computerScore){
+       return "This game is a tie!";
+    }else{
+        return "You loose the game :(";
     }
 }
 
