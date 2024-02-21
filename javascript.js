@@ -21,19 +21,21 @@ function getComputerChoice(){
     return choice[Math.floor(Math.random() * choice.length)];
 }
 
-console.log(computerSelection);
 console.log(playerSelection);
+console.log(computerSelection);
 
 function playRound(playerSelection, computerSelection) {
     if(playerSelection == computerSelection){
         return `Tie! You both choose ${playerSelection}`;
+    }else if(playerSelection == "rock" && computerSelection == "paper"){
+        return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else if(playerSelection == "rock" && computerSelection == "scissors"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
     }else if(playerSelection == "paper" && computerSelection == "rock"){
         return `You Loose! ${computerSelection} beats ${playerSelection}`
     }else if(playerSelection == "scissors" && computerSelection == "paper"){
         return `You Win! ${playerSelection} beats ${computerSelection}`
-    }
+    }    
   }
   
   console.log(playRound(playerSelection, computerSelection));
